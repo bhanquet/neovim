@@ -21,7 +21,7 @@ return {
 			--   - { exclude: string[] }: All servers set up via lspconfig, except the ones provided in the list, are automatically installed.
 			--       Example: automatic_installation = { exclude = { "rust_analyzer", "solargraph" } }
 			---@type boolean
-			automatic_installation = true,
+			automatic_installation = false,
 
 			-- See `:h mason-lspconfig.setup_handlers()`
 			---@type table<string, fun(server_name: string)>?
