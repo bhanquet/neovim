@@ -6,6 +6,7 @@ return {
 		'williamboman/mason-lspconfig.nvim',
 		dependencies = {
 			'williamboman/mason.nvim',
+			'hrsh7th/cmp-nvim-lsp',
 		},
 		opts = {
 			-- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "lua_ls" }
@@ -26,14 +27,15 @@ return {
 			-- See `:h mason-lspconfig.setup_handlers()`
 			---@type table<string, fun(server_name: string)>?
 			handlers = {
-			        -- The first entry (without a key) will be the default handler
-			        -- and will be called for each installed server that doesn't have
+				-- The first entry (without a key) will be the default handler
+				-- and will be called for each installed server that doesn't have
 				-- a dedicated handler.
 				function (server_name) -- default handler (optional)
-					require("lspconfig")[server_name].setup {}
+					local capabilities = require('cmp_nvim_lsp').default_capabilities()
+					require("lspconfig")[server_name].setup {
+						capabilities = capabilities
+					}
 				end,
-				-- Next, you can provide a dedicated handler for specific servers.
-				-- For example, a handler override for the `rust_analyzer`:
 			},
 		},
 	}
