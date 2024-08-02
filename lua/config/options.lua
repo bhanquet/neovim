@@ -29,6 +29,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- Miscs
+vim.opt.termguicolors = true
 vim.opt.swapfile = false
 vim.opt.autoread = true
 vim.opt.spell = true
