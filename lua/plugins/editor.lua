@@ -31,11 +31,12 @@ return {
             },
         },
         config = function(_, opts)
+            local api = require("nvim-tree.api")
             vim.g.loaded_netrw = 1
             vim.g.loaded_netrwPlugin = 1
 
             require('nvim-tree').setup(opts)
-            
+            vim.keymap.set('n', '<leader>e', api.tree.toggle)
         end
     }
 }
