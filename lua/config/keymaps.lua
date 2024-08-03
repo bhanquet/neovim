@@ -36,7 +36,3 @@ map('n', '<leader>tn', '<cmd>tabnext<cr>')
 map('n', '<leader>tp', '<cmd>tabprevious<cr>')
 map('n', '<leader>to', '<cmd>tabonly<cr>')
 map('n', '<leader>tq', '<cmd>tabclose<cr>')
-
--- File
-map('n', '<leader>w', '<cmd>wall<cr>')
-map('n', '<leader>q', '<cmd>wq<cr>')
