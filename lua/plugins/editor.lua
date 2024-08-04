@@ -38,5 +38,11 @@ return {
             require('nvim-tree').setup(opts)
             vim.keymap.set('n', '<leader>e', api.tree.toggle)
         end
+    },
+    {
+        'mbbill/undotree',
+        keys = {
+            {'<leader>u', vim.cmd.UndotreeToggle}
+        },
     }
 }
