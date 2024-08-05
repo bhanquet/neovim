@@ -34,6 +34,8 @@ return {
             local api = require("nvim-tree.api")
             vim.g.loaded_netrw = 1
             vim.g.loaded_netrwPlugin = 1
+            -- Auto focus on undotree
+            vim.g.undotree_SetFocusWhenToggle = 1
 
             require('nvim-tree').setup(opts)
             vim.keymap.set('n', '<leader>e', api.tree.toggle)
@@ -44,5 +46,10 @@ return {
         keys = {
             {'<leader>u', vim.cmd.UndotreeToggle}
         },
-    }
+    },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        opts = {},
+    },
 }
