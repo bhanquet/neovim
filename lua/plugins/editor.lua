@@ -57,4 +57,9 @@ return {
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         opts = {},
     },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {},
+    },
 }
