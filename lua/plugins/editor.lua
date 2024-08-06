@@ -62,4 +62,9 @@ return {
         event = "InsertEnter",
         opts = {},
     },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {}
+    }
 }
