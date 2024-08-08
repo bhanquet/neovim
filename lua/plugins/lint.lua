@@ -2,7 +2,9 @@ return {
 	{
 		"mfussenegger/nvim-lint",
 		config = function()
-			require("lint").linters_by_ft = {}
+			require("lint").linters_by_ft = {
+				php = { "phpcs" },
+			}
 
 			vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 				callback = function()
@@ -18,7 +20,6 @@ return {
 			"mfussenegger/nvim-lint",
 		},
 		opts = {
-			ensure_installed = {},
 			automatic_installation = true,
 		},
 	},
