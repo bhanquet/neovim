@@ -9,7 +9,8 @@ return {
 			rust = { "rustfmt", lsp_format = "fallback" },
 			-- Conform will run the first available formatter
 			javascript = { "prettierd", "prettier", stop_after_first = true },
-			blade = { "blade-formatter" },
+
+            php = { { "pint", "php_cs_fixer" } },
 		},
 		format_on_save = {
 			lsp_format = "fallback",
