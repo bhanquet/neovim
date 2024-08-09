@@ -2,19 +2,13 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		lazy = true,
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-		},
-		config = function()
-			local lspconfig = require("lspconfig")
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = {
 			"williamboman/mason.nvim",
 			"hrsh7th/cmp-nvim-lsp",
+			"neovim/nvim-lspconfig",
 		},
 		opts = {
 			-- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "lua_ls" }
@@ -41,7 +35,7 @@ return {
 				function(server_name) -- default handler (optional)
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()
 					require("lspconfig")[server_name].setup({
-						-- capabilities = capabilities
+						capabilities = capabilities,
 					})
 				end,
 			},
