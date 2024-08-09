@@ -12,6 +12,7 @@ return {
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 
 				php = { "pint", "php_cs_fixer", stop_after_first = true },
+				go = { "gofumpt" },
 			},
 			format_on_save = {
 				lsp_format = "fallback",
