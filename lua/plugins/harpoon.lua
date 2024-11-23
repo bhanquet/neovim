@@ -3,7 +3,7 @@ return {
 	dependencies = "nvim-lua/plenary.nvim",
 	keys = {
 		{
-			"<leader>m",
+			"<leader>hm",
 			function()
 				require("harpoon.mark").add_file()
 			end,
