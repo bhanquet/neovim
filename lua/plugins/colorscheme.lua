@@ -5,7 +5,7 @@ return {
     opts = {
       variant = "moon",
       styles = {
-        transparency = true,
+        -- transparency = true,
       },
     },
   },
