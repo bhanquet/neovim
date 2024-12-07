@@ -5,3 +5,5 @@
 local opt = vim.opt
 opt.confirm = false
 opt.clipboard = "unnamed" -- Stop system clipboard sync
+
+vim.g.autoformat = false
